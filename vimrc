@@ -72,7 +72,7 @@ ab #d #define
 ab #i #include <>
 
 " Fix the del key
-set t_kD=
+" set t_kD=
 
 " Line numbers, show them.
 set number
