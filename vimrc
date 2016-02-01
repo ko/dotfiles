@@ -1,13 +1,3 @@
-" My vimrc file.
-"
-" 2007 Sep 12: First version
-" 2008 Feb 10: Second version
-"
-" Ken Ko <web@yaksok.net>
-"
-" 2010 Oct 07: First version
-" 2011 Oct 31: Second version
-"
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -72,7 +62,7 @@ ab #d #define
 ab #i #include <>
 
 " Fix the del key
-" set t_kD=
+"set t_kD=
 
 " Line numbers, show them.
 set number
