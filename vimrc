@@ -121,6 +121,10 @@ if has("autocmd")
     \   exe "normal g`\"" |
     \ endif
 
+  " Set space and tab widths by filetype
+  autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
+  autocmd Filetype python setlocal ts=4 sw=4 sts=4 expandtab
+
   augroup END
 
 else
