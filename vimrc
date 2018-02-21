@@ -1,3 +1,15 @@
+" My vimrc file.
+"
+" 2007 Sep 12: First version
+" 2008 Feb 10: Second version
+"
+" Ken Ko <web@yaksok.net>
+"
+" 2010 Oct 07: First version
+" 2011 Oct 31: Second version
+"
+
+execute pathogen#infect()
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -25,8 +37,8 @@ set incsearch		" do incremental searching
 set sw=4
 set autowrite		" write the old file out when switching from one file to another
 set backupdir=~/.vimbackup
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
  set expandtab
 set comments=s1:/*:,mb:*,ex:*/
 "set path+=./**,../build/**
@@ -62,7 +74,7 @@ ab #d #define
 ab #i #include <>
 
 " Fix the del key
-"set t_kD=
+" set t_kD=
 
 " Line numbers, show them.
 set number
@@ -121,14 +133,15 @@ if has("autocmd")
     \   exe "normal g`\"" |
     \ endif
 
-  " Set space and tab widths by filetype
-  autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
-  autocmd Filetype python setlocal ts=4 sw=4 sts=4 expandtab
-
   augroup END
+
+  au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
+
+  nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
 else
 
   set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
+
